@@ -1,10 +1,7 @@
 from time import sleep
-
 from conftest import setup_browser
-
 from selene import have
 from selene import browser
-
 from pages.rndnsoft_page import Start_page
 
 
