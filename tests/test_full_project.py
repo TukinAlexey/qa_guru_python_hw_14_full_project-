@@ -72,3 +72,20 @@ def test_en_language_selenoid_with_OOP(setup_browser):
 @allure.link('https://github.com', name='Testing')
 def test_allure_labels():
     pass
+
+
+def test_inn_on_requisites_page(setup_browser):
+    browser = setup_browser
+    start_page = Start_page()
+
+    # Открываем стартовую страницу
+    with allure.step("Open start page"):
+        start_page.open_start_pag(browser)
+
+    # Переключаю язык на английский
+    with allure.step("go to requisites page"):
+        start_page.requisites_page(browser)
+
+    # Проверяю что изменился язык на сайте
+    with allure.step("check inn on requisites page"):
+        start_page.check_inn(browser)
