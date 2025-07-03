@@ -64,7 +64,7 @@ class Rndsoft_page:
 
         browser.element('#vacancy_8 > .name.is-flex.is-align-items-center.is-justify-content-space-between > p').should(
             have.exact_text(
-                "QA-инженер/Тестировщи"))
+                "QA-инженер/Тестировщик"))
 
     def check_description_qa_vacancy(self, setup_browser):
         browser = setup_browser
