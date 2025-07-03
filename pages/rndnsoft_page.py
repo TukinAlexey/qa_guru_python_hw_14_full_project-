@@ -5,7 +5,7 @@ from selene import have
 from conftest import setup_browser
 
 
-class Start_page:
+class Rndsoft_page:
     browser = setup_browser
 
     def open_start_pag(self, setup_browser):
@@ -40,3 +40,36 @@ class Start_page:
 
         browser.element('[class="text has-text-grey-dark custom-is-size-body line-height-140"]').should(have.text(
             "6165189197"))
+
+    def go_to_product_page(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[data-action="click->burger-menu#toggleBurgerMenu"]').click()
+        browser.element('//*[contains(text(),"Продукты")]').click()
+
+    def check_product_page(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('.products .is-hidden-mobile h1').should(have.exact_text(
+            "Продукты"))
+
+    def go_to_vacancy_page(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[data-action="click->burger-menu#toggleBurgerMenu"]').click()
+        browser.element('//*[contains(text(),"Вакансии")]').click()
+
+    def check_availability_qa_vacancy(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('#vacancy_8 > .name.is-flex.is-align-items-center.is-justify-content-space-between > p').should(
+            have.exact_text(
+                "QA-инженер/Тестировщи"))
+
+    def check_description_qa_vacancy(self, setup_browser):
+        browser = setup_browser
+
+        browser.element(
+            '[class="is-size-5-tablet custom-is-size-body--mobile has-text-white is-family-sans-serif line-height-140"]').should(
+            have.exact_text(
+                "Мы не стоим на месте: используем современные подходы к разработке, заботимся о безопасности, ценим гибкость и умеем работать командой. И сейчас ищем того, кто усилит нас в роли QA инженера."))
