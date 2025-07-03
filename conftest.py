@@ -8,21 +8,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from utils import attach
 
-@pytest.fixture(scope="session")
-def browser_screen_size():
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
-    yield browser
-    browser.quit()
-
-@pytest.fixture
-def open_browser_chrome(browser_screen_size):
-    browser_screen_size.open('https://www.rnd-soft.ru/')
-
-
-
-#Pfgecr через селенойд
-
 @pytest.fixture(scope="session", autouse=True)
 def load_env():
     load_dotenv()
@@ -56,7 +41,7 @@ def setup_browser(request):
     yield browser
 
     attach.add_screenshot(browser)
-    # attach.add_logs(browser)
+    attach.add_logs(browser)
     attach.add_html(browser)
     attach.add_video(browser)
 
