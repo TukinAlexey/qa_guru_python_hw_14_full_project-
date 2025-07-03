@@ -1,11 +1,9 @@
 import os
-
 import pytest
-from dotenv import load_dotenv
-from selene import browser
-
+from selene import Browser, Config
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from dotenv import load_dotenv
 from utils import attach
 
 @pytest.fixture(scope="session", autouse=True)
@@ -35,9 +33,7 @@ def setup_browser(request):
         options=options
     )
 
-    browser.config.driver = driver
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
+    browser = Browser(Config(driver, window_width=1920, window_height=1080))
     yield browser
 
     attach.add_screenshot(browser)
@@ -45,4 +41,4 @@ def setup_browser(request):
     attach.add_html(browser)
     attach.add_video(browser)
 
-    browser.quit()
+    driver.quit()
