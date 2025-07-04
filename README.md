@@ -9,4 +9,4 @@
 
 ## Продемонстрированы навыки создания инфраструктуры проекта: 
 - Создан [билд в jenkins](https://jenkins.autotests.cloud/job/qa_gugu_hw_my_full_project/)
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/jenkins.png?raw=true)
+![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/jenkins.png?raw=true)
