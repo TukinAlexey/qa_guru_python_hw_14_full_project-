@@ -7,13 +7,9 @@ from pages.rndnsoft_page import Rndsoft_page
 @allure.tag("test")
 @allure.severity(Severity.MINOR)
 @allure.label('owner', 'atukin')
-@allure.feature('Issues_name')
-@allure.story('Проверка названия Issue')
+@allure.feature('Тест сайта rndn_soft')
+@allure.story('Проверка смены на английский язык')
 @allure.link('https://github.com', name='Testing')
-def test_allure_labels():
-    pass
-
-
 def test_change_english_language(setup_browser):
     browser = setup_browser
     rndsoft_page = Rndsoft_page()
@@ -31,6 +27,12 @@ def test_change_english_language(setup_browser):
         rndsoft_page.check_english_language_on_page(browser)
 
 
+@allure.tag("test")
+@allure.severity(Severity.MINOR)
+@allure.label('owner', 'atukin')
+@allure.feature('Тест сайта rndn_soft')
+@allure.story('Проверка ИНН на странице реквизитов')
+@allure.link('https://github.com', name='Testing')
 def test_inn_on_requisites_page(setup_browser):
     browser = setup_browser
     rndsoft_page = Rndsoft_page()
@@ -48,6 +50,12 @@ def test_inn_on_requisites_page(setup_browser):
         rndsoft_page.check_inn(browser)
 
 
+@allure.tag("test")
+@allure.severity(Severity.MINOR)
+@allure.label('owner', 'atukin')
+@allure.feature('Тест сайта rndn_soft')
+@allure.story('Проверка перехода на страницу Продукты')
+@allure.link('https://github.com', name='Testing')
 def test_go_to_product_page(setup_browser):
     browser = setup_browser
     rndsoft_page = Rndsoft_page()
@@ -65,6 +73,12 @@ def test_go_to_product_page(setup_browser):
         rndsoft_page.check_product_page(browser)
 
 
+@allure.tag("test")
+@allure.severity(Severity.MINOR)
+@allure.label('owner', 'atukin')
+@allure.feature('Тест сайта rndn_soft')
+@allure.story('Проверка наличия вакансии')
+@allure.link('https://github.com', name='Testing')
 def test_availability_qa_vacancy(setup_browser):
     browser = setup_browser
     rndsoft_page = Rndsoft_page()
@@ -82,6 +96,12 @@ def test_availability_qa_vacancy(setup_browser):
         rndsoft_page.check_availability_qa_vacancy(browser)
 
 
+@allure.tag("test")
+@allure.severity(Severity.MINOR)
+@allure.label('owner', 'atukin')
+@allure.feature('Тест сайта rndn_soft')
+@allure.story('Проверка корректного описания вакансии')
+@allure.link('https://github.com', name='Testing')
 def test_description_qa_vacancy(setup_browser):
     browser = setup_browser
     rndsoft_page = Rndsoft_page()
