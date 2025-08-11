@@ -1,6 +1,6 @@
 from time import sleep
 
-from selene import have
+from selene import have, be
 
 from conftest import setup_browser
 
@@ -73,3 +73,37 @@ class Rndsoft_page:
             '[class="is-size-5-tablet custom-is-size-body--mobile has-text-white is-family-sans-serif line-height-140"]').should(
             have.exact_text(
                 "Мы не стоим на месте: используем современные подходы к разработке, заботимся о безопасности, ценим гибкость и умеем работать командой. И сейчас ищем того, кто усилит нас в роли QA инженера."))
+
+    def go_to_company_page(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[data-action="click->burger-menu#toggleBurgerMenu"]').click()
+        browser.element('//*[contains(text(),"Компания")]').click()
+
+    def fill_and_submit_message_form(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[placeholder="Имя*"]').type('Ivan')
+        browser.element('[placeholder="Электронная почта*"]').type('dobryden@mail.ru')
+        browser.element('[placeholder="Сообщение*"]').type('Добрый день')
+        browser.element('#feedback_agreement').click()
+        browser.element('[type="submit"]').click()
+
+    def check_sending_message_success(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('//h2[text()="Отправлено!"]').should(be.visible)
+
+    def fill_and_submit_message_form_without_agreement(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[placeholder="Имя*"]').type('Ivan')
+        browser.element('[placeholder="Электронная почта*"]').type('dobryden@mail.ru')
+        browser.element('[placeholder="Сообщение*"]').type('Добрый день')
+        browser.element('[type="submit"]').click()
+
+    def check_error_sending_message(self, setup_browser):
+        browser = setup_browser
+
+        browser.element('[class="is-size-6 line-height-120 has-text-danger mt-1"]').should(have.exact_text(
+            "Чекбокс не может быть неотмеченным"))
