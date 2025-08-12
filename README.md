@@ -12,12 +12,12 @@
 ## Продемонстрированы навыки создания инфраструктуры проекта: 
 - Создан [билд в jenkins](https://jenkins.autotests.cloud/job/qa_gugu_hw_my_full_project/)
 ![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Jenkins_1.png)
-- К прогонам в jenkins добавляется [allure отчет](https://jenkins.autotests.cloud/job/qa_gugu_hw_my_full_project/) к которому приложены:
+- К прогонам в jenkins добавляется [allure отчет](https://jenkins.autotests.cloud/job/qa_gugu_hw_my_full_project/26/allure/#suites) к которому приложены:
   - Скриншот
   - Логи браузера
   - Ресурс страницы
   - Видео прохождение теста 
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Allure.png?raw=true)
+![image](![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Allure_1.png))
 - Кейсы из прогона добавляются в [TestOps](https://allure.autotests.cloud/project/4825/test-cases/38830?treeId=9437)
 ![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/TestOps.png?raw=true)
 - Прогоны и кейсы из TeasOps добавляются в задачу [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1475)
