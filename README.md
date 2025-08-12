@@ -17,7 +17,7 @@
   - Логи браузера
   - Ресурс страницы
   - Видео прохождение теста 
-![image](![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Allure_1.png))
+![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Allure_1.png)
 - Кейсы из прогона добавляются в [TestOps](https://allure.autotests.cloud/project/4825/test-cases/38830?treeId=9437)
 ![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/TestOps.png?raw=true)
 - Прогоны и кейсы из TeasOps добавляются в задачу [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1475)
