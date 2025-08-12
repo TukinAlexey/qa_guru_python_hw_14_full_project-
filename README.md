@@ -19,9 +19,7 @@
   - Видео прохождение теста 
 ![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Allure_1.png)
 - Кейсы из прогона добавляются в [TestOps](https://allure.autotests.cloud/project/4825/test-cases/38830?treeId=9437)
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/TestOps.png?raw=true)
-- Прогоны и кейсы из TeasOps добавляются в задачу [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1475)
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Cases.png?raw=true)
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Launches.png?raw=true)
+![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/TestOps_1.png)
+- Настроен запуск автотестов из TestOps
 - После прогона в телеграм отправляется отчет о прохождении тестов
-![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Bot.png?raw=true)
+![image](https://github.com/TukinAlexey/qa_guru_python_hw_14_full_project-/blob/main/files/Telegram_1.png)
